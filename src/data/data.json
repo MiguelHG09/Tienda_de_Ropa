@@ -1,0 +1,490 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "thumb_src": "/assets/ropa/camisa-blanca.jpg",
+      "thumb_alt": "Camisa Blanca",
+      "title": "Camisa Oxford Essential",
+      "price": 450.00,
+      "category": "Hombre",
+      "description": "Un clásico atemporal rediseñado para el día a día. Confeccionada con algodón premium texturizado que ofrece una estructura impecable y máxima frescura. Su corte estilizado combina la sastrería tradicional con la versatilidad moderna, convirtiéndose en el lienzo perfecto para cualquier ocasión."
+    },
+    {
+      "id": "2",
+      "thumb_src": "/assets/ropa/camisa-naranja.jpg",
+      "thumb_alt": "Camisa Naranja",
+      "title": "Camisa Casual Terracota",
+      "price": 890.00,
+      "category": "Mujer",
+      "description": "Captura la calidez de la temporada con una silueta ligera y llena de energía. Confeccionada en un tejido transpirable de tacto suave, esta camisa ofrece el equilibrio perfecto entre comodidad y un estilo audaz y sofisticado. Ideal para usar abierta sobre una camiseta básica o abotonada para un look de tarde impecable."
+    },
+    {
+      "id": "3",
+      "thumb_src": "/assets/ropa/camisa-negrad.jpg",
+      "thumb_alt": "Camisa Negra",
+      "title": "Camisa Active Performance",
+      "price": 950.00,
+      "category": "Hombre",
+      "description": "Diseñada para el movimiento, estructurada para el estilo. Esta prenda fusiona tecnología textil de alta resistencia con una silueta estilizada y minimalista. Confeccionada con un tejido ligero y transpirable que repele la humedad, ofrece máxima frescura y confort durante tus entrenamientos más exigentes o en tus días activos por la ciudad."
+    },
+    {
+      "id": "4",
+      "thumb_src": "/assets/ropa/camisa-gris.jpg",
+      "thumb_alt": "Camisa Gris",
+      "title": "Camisa Sastrería Gris Grafito",
+      "price": 550.00,
+      "category": "Hombre",
+      "description": "Diseñada con un corte nítido y preciso que esculpe la silueta masculina con total sofisticación. Su tejido de algodón premium de alta densidad ofrece un acabado pulcro, sedoso al tacto y altamente resistente a las arrugas. La pieza definitiva para eventos formales o reuniones de negocios donde la primera impresión lo es todo."
+    },
+    {
+      "id": "5",
+      "thumb_src": "/assets/ropa/camisa-grisoscuro.jpg",
+      "thumb_alt": "Camisa Gris Oscuro",
+      "title": "Blusa Casual  Gris Neblina",
+      "price": 650.00,
+      "category": "Mujer",
+      "description": "Esta camisa equilibra perfectamente la sastrería clásica con un espíritu relajado, ideal para transicionar sin esfuerzo entre la oficina y una cena casual. Su tejido premium de textura sutil ofrece una caída impecable, confort duradero y una versatilidad inigualable que combina con cualquier pieza de tu armario."
+    },
+    {
+      "id": "6",
+      "thumb_src": "/assets/ropa/camisa-beige.jpg",
+      "thumb_alt": "Camisa Beige",
+      "title": "Polo Knit Essential Beige",
+      "price": 480.00,
+      "category": "Hombre",
+      "description": "Esta polo destaca por su tejido de punto premium finamente entrelazado, ofreciendo una textura suave, fresca y una caída que se amolda impecablemente al cuerpo. Su cuello estructurado y líneas minimalistas la convierten en la prenda ideal para lograr un look smart-casual elevado y sin esfuerzo durante los días cálidos."
+    },
+    {
+      "id": "7",
+      "thumb_src": "/assets/ropa/camisa-negra.jpg",
+      "thumb_alt": "Camisa Negra",
+      "title": "Camisa Negra Elegante",
+      "price": 600.00,
+      "category": "Hombre",
+      "description": "Un clásico absoluto que no puede faltar en el guardarropa de ningún hombre."
+    },
+    {
+      "id": "8",
+      "thumb_src": "/assets/ropa/jean-azul.jpg",
+      "thumb_alt": "Pantalón Azul",
+      "title": "Short Bermuda Azul Celeste",
+      "price": 1100.00,
+      "category": "Mujer",
+      "description": "Diseñado con un corte alargado a la rodilla de inspiración sartorial, este short equilibra la frescura del verano con una presencia elegante y pulcra. Su tejido ligero y transpirable ofrece una estructura cómoda de tiro medio-alto que estiliza la figura, ideal para combinar con sandalias o mocasines en una tarde relajada."
+    },
+    {
+      "id": "9",
+      "thumb_src": "/assets/ropa/vestido-blanco.jpg",
+      "thumb_alt": "Vestido Blanco",
+      "title": "Vestido Riviera Blanco Marfil",
+      "price": 750.00,
+      "category": "Mujer",
+      "description": "Confeccionado en un tejido ligero de caída espectacular, este vestido combina una silueta fluida y ultra femenina con sutiles detalles de sastrería limpia. Su diseño atemporal irradia luz propia y versatilidad, convirtiéndose en la pieza perfecta tanto para dar un paseo junto al mar como para disfrutar de un evento sofisticado al atardecer."
+    },
+    {
+      "id": "10",
+      "thumb_src": "/assets/ropa/blusa-mariposa.jpg",
+      "thumb_alt": "Blusa Floral",
+      "title": "Camisa Mariposas Monarca",
+      "price": 520.00,
+      "category": "Mujer",
+      "description": "Esta camisa eleva el concepto del estampado con un patrón exclusivo de mariposas artísticas sobre un fondo sutilmente texturizado. Su silueta relajada y su tejido transpirable aportan una frescura inigualable, ideal para inyectar personalidad, dinamismo y un toque de sofisticación contemporánea a tus combinaciones de temporada."
+    },
+    {
+      "id": "11",
+      "thumb_src": "/assets/ropa/pantalon-pijama-azul.jpg",
+      "thumb_alt": "Pantalón Pijama Azul",
+      "title": "Pantalón Lounge Azul Náutico",
+      "price": 600.00,
+      "category": "Mujer",
+      "description": "Diseñado con una silueta holgada que permite una total libertad de movimiento, este pantalón de descanso destaca por su suave tejido satinado y un sutil estampado de inspiración náutica. Su pretina elástica ajustable se amolda con suavidad a la cintura, ofreciendo una experiencia de confort de lujo para tus noches o tus tardes de relajación en casa."
+    },
+    {
+      "id": "12",
+      "thumb_src": "/assets/ropa/camisa-blanca-azul.jpg",
+      "thumb_alt": "Camisa Blanca Azul",
+      "title": "Camisa Signature Oxford",
+      "price": 550.00,
+      "category": "Hombre",
+      "description": "Confeccionada en algodón premium de estructura impecable y frescura garantizada, esta pieza destaca por la pulcritud de su fondo blanco óptico, contrastado elegantemente por nuestro logo bordado en tono azul índigo. Su corte contemporáneo ofrece una silueta limpia y equilibrada, ideal para quienes aprecian la sofisticación en los detalles sutiles."
+    },
+    {
+      "id": "13",
+      "thumb_src": "/assets/ropa/sudadera-gris.jpg",
+      "thumb_alt": "Sudadera Gris",
+      "title": "Sudadera Active Gris",
+      "price": 800.00,
+      "category": "Hombre",
+      "description": "Esta sudadera redefine el concepto deportivo gracias a su tejido fleece de densidad premium, que ofrece un tacto ultra suave en el interior y un acabado pulcro y estructurado en el exterior. Diseñada con cortes ergonómicos y minimalistas, mantiene la temperatura corporal ideal con la máxima ligereza, convirtiéndose en tu aliada esencial tanto para entrenamientos activos como para tus días de descanso."
+    },
+    {
+      "id": "14",
+      "thumb_src": "/assets/ropa/vestido-negro.jpg",
+      "thumb_alt": "Vestido Negro",
+      "title": "Vestido Legado Artesanal",
+      "price": 950.00,
+      "category": "Mujer",
+      "description": "Sobre un lienzo de hilo negro profundo y silueta fluida, este vestido destaca por sus intrincados detalles y texturas inspiradas en la sastrería tradicional. Su diseño logra un equilibrio perfecto entre misticismo, romanticismo y modernidad, ofreciendo una caída espectacular y una presencia imponente y sofisticada que cautiva en cualquier ocasión especial."
+    },
+    {
+      "id": "15",
+      "thumb_src": "/assets/ropa/pijama-rosa.jpg",
+      "thumb_alt": "Pijama Rosa",
+      "title": "Conjunto Lounge Rosa",
+      "price": 650.00,
+      "category": "Mujer",
+      "description": "Este conjunto destaca por su tejido ultra suave de caída ligera y fluida, diseñado para acariciar la piel con total delicadeza. Su sutil tonalidad rosa pastel aporta una estética limpia, relajada y romántica, mientras que sus acabados minimalistas y costuras finas garantizan un ajuste perfecto que eleva el concepto de estar en casa con elegancia atemporal."
+    },
+    { 
+      "id": "16", 
+      "thumb_src": "/assets/ropa/Sueter-ferrari.jpg", 
+      "thumb_alt": "Sueter Ferrari", 
+      "title": "Sueter Ferrari rojo", 
+      "price": 1500.00, 
+      "category": "Hombre", 
+      "description": "Confeccionado en un tejido premium de alta densidad, este suéter ofrece una estructura impecable y un confort térmico superior sin perder ligereza. Su vibrante tono rojo automotriz se complementa con líneas aerodinámicas de sastrería moderna y el icónico escudo de la Scuderia con acabados de alta precisión. Una pieza de declaración audaz para quienes viven con pasión y exigen el máximo estilo."
+    },
+    { 
+    "id": "17", 
+    "thumb_src": "/assets/ropa/Camisa-puma-negra.jpg", 
+    "thumb_alt": "Camisa Puma Negra", 
+    "title": "Camiseta Puma clásica negra", 
+    "price": 850.00, 
+    "category": "Hombre", 
+    "description": "Una prenda esencial de carácter deportivo y urbano. Esta camiseta está confeccionada en algodón suave de primera calidad, garantizando frescura y durabilidad para el uso diario. Destaca por el imponente y clásico logotipo de la marca estampado en un contraste blanco nítido sobre el pecho, aportando una energía dinámica y un estilo minimalista impecable."
+  },
+  { 
+    "id": "18", 
+    "thumb_src": "/assets/ropa/Camisa-ferrari-negra.jpg", 
+    "thumb_alt": "Camisa Ferrari Negra", 
+    "title": "Camiseta Ferrari Casual", 
+    "price": 1200.00, 
+    "category": "Hombre", 
+    "description": "Diseño sofisticado con el auténtico ADN de la velocidad. Elaborada con un tejido ligero y de textura ultra suave, esta camiseta presenta la icónica tipografía de la escudería en un elegante acabado metalizado sobre el pecho. Los sutiles detalles en los hombros y el dobladillo inferior rinden homenaje a la herencia italiana, ideal para un look casual de alta gama."
+  },
+  { 
+    "id": "19", 
+    "thumb_src": "/assets/ropa/Buso-negro.jpg", 
+    "thumb_alt": "Buso Negro", 
+    "title": "Pantalón deportivo negro", 
+    "price": 1100.00, 
+    "category": "Deporte", 
+    "description": "Diseñado para maximizar el rendimiento y la comodidad en movimiento. Este pantalón de corte ergonómico cuenta con una cintura elástica ajustable que se adapta perfectamente a tu silueta y bolsillos laterales de fácil acceso. Su tejido técnico transpirable aleja la humedad de la piel, haciéndolo la opción perfecta tanto para entrenamientos intensos como para días de descanso activo."
+  },
+  { 
+    "id": "20", 
+    "thumb_src": "/assets/ropa/Camisa-negra-deportiva.jpg", 
+    "thumb_alt": "Camisa Negra Deportiva", 
+    "title": "Camiseta de compresión Tribord", 
+    "price": 950.00, 
+    "category": "Mujer", 
+    "description": "Rendimiento técnico y estilo estilizado en una sola pieza. Esta camiseta de cuello alto y mangas medias está diseñada con costuras planas decorativas en contraste que delinean la figura sin causar fricción. Su tejido elástico de alta resistencia ofrece un ajuste ceñido ideal para deportes acuáticos o entrenamientos al aire libre, brindando libertad total de movimiento."
+  },
+  { 
+    "id": "21", 
+    "thumb_src": "/assets/ropa/calzoneta-roja.jpg", 
+    "thumb_alt": "Calzoneta Roja", 
+    "title": "Bermuda playera Probase", 
+    "price": 650.00, 
+    "category": "Hombre", 
+    "description": "Inyecta diversión y frescura a tus días de sol con esta bermuda de baño. Confeccionada en un tejido de secado ultra rápido, destaca por su vibrante fondo rojo cubierto con un patrón animado lleno de personalidad y cultura urbana. Cuenta con una pretina elástica reforzada que asegura un ajuste cómodo y confiable dentro y fuera del agua."
+  },
+  { 
+    "id": "22", 
+    "thumb_src": "/assets/ropa/vestido-azul.jpg", 
+    "thumb_alt": "Vestido Azul", 
+    "title": "Vestido casual azul texturizado", 
+    "price": 1400.00, 
+    "category": "Mujer", 
+    "description": "La definición perfecta de elegancia cotidiana. Este vestido de silueta recta y mangas cortas presenta un intrincado patrón geométrico en tonos azules que añade profundidad visual. Su sofisticado cuello mao se combina con un panel superior liso a contraste en los hombros, creando una estructura moderna y versátil ideal tanto para la oficina como para salidas casuales."
+  },
+  { 
+    "id": "23", 
+    "thumb_src": "/assets/ropa/camisa-rallas-azul.jpg", 
+    "thumb_alt": "Camisa Rallas Azul", 
+    "title": "Suéter ligero a rayas náuticas", 
+    "price": 900.00, 
+    "category": "Mujer", 
+    "description": "Una prenda versátil con un toque chic y relajado. Este suéter ligero de cuello barco amplio resalta por su vibrante patrón de rayas horizontales en tonos azul marino y turquesa. Sus mangas tres cuartos y su ajuste holgado en el torso lo convierten en la opción ideal para las transiciones de clima, aportando un aire fresco y sofisticado a cualquier combinación con mezclilla."
+  },
+  { 
+    "id": "24", 
+    "thumb_src": "/assets/ropa/pijama-rosa-oscura.jpg", 
+    "thumb_alt": "Pijama Rosa Oscura", 
+    "title": "Pijama confort cuadros rosa", 
+    "price": 1050.00, 
+    "category": "Mujer", 
+    "description": "Diseñada exclusivamente para garantizar el descanso más placentero. Este conjunto de pijama combina una blusa larga de mangas cortas con un delicado patrón de cuadros en tonos rosa y blanco, complementada con un pantalón liso de corte recto en rosa oscuro. Fabricada en un tejido de algodón ultra suave y transpirable que acaricia la piel durante toda la noche."
+  },
+  { 
+    "id": "25", 
+    "thumb_src": "/assets/ropa/Falda-azul-oscuro.jpg", 
+    "thumb_alt": "Falda Azul Oscuro", 
+    "title": "Minifalda sastre azul marino", 
+    "price": 800.00, 
+    "category": "Mujer", 
+    "description": "Una pieza clave para un guardarropa contemporáneo y estructurado. Esta falda de corte en línea A está confeccionada en una tela de gabardina ligera de alta calidad que mantiene su forma impecable. Incorpora discretos bolsillos laterales funcionales y una pretina de tiro alto que define la cintura con delicadeza, perfecta para transicionar de un look profesional a uno casual."
+  },
+  { 
+    "id": "26", 
+    "thumb_src": "/assets/ropa/pantalon-beige.jpg", 
+    "thumb_alt": "Pantalon Beige", 
+    "title": "Pantalón de vestir beige formal", 
+    "price": 1150.00, 
+    "category": "Mujer", 
+    "description": "Sofisticación y estructura para el día a día. Este pantalón de vestir en tono beige arena cuenta con un corte recto sutilmente ajustado en los tobillos y elegantes pliegues frontales que aportan volumen controlado. Su diseño incluye pasadores para cinturón, ideal para combinar con blusas formales y crear un look ejecutivo impecable y cómodo."
+  },
+  { 
+    "id": "27", 
+    "thumb_src": "/assets/ropa/vestido-rosa.jpg", 
+    "thumb_alt": "Vestido Rosa", 
+    "title": "Vestido camisero rosa vibrante", 
+    "price": 1250.00, 
+    "category": "Mujer", 
+    "description": "Una explosión de color y frescura veraniega. Este vestido de estilo camisero destaca por su cuello mao corto y una fila de botones frontales a tono. Su silueta ligera y fluida se complementa con mangas japonesas minimalistas y un delicado cinturón delgado a contraste que define la cintura con un toque moderno."
+  },
+  { 
+    "id": "28", 
+    "thumb_src": "/assets/ropa/chumpa-azul.jpg", 
+    "thumb_alt": "Chumpa Azul", 
+    "title": "Chaqueta utilitaria azul eléctrico", 
+    "price": 1650.00, 
+    "category": "Hombre", 
+    "description": "El equilibrio perfecto entre funcionalidad urbana y estilo audaz. Confeccionada en un tejido resistente al viento, esta chaqueta de cuello alto cuenta con bolsillos de solapa en el pecho y bolsillos laterales ergonómicos. Su cierre frontal oculto y sus broches ajustables en los puños garantizan un aislamiento óptimo con un acabado limpio."
+  },
+  { 
+    "id": "29", 
+    "thumb_src": "/assets/ropa/camisa-amarilla.jpg", 
+    "thumb_alt": "Camisa Amarilla", 
+    "title": "Camisa polo Timberland mostaza", 
+    "price": 950.00, 
+    "category": "Hombre", 
+    "description": "Un clásico atemporal renovado en un tono cálido y versátil. Esta camisa polo de piqué de algodón premium ofrece una transpirabilidad superior y un ajuste cómodo en los hombros. Cuenta con el icónico árbol de la marca bordado de forma discreta en el pecho y un cuello estructurado de dos botones ideal para un estilo casual refinado."
+  },
+  { 
+    "id": "30", 
+    "thumb_src": "/assets/ropa/camisa-polo.jpg", 
+    "thumb_alt": "Camisa Polo", 
+    "title": "Camisa polo náutica a rayas", 
+    "price": 850.00, 
+    "category": "Mujer", 
+    "description": "Inspiración deportiva con un toque clásico y juvenil. Esta polo presenta un patrón de rayas horizontales en azul marino y blanco, roto sutilmente por una franja roja audaz en el pecho. Diseñada con un cuello blanco en contraste, solapa de botones alargada y mangas cortas con ribete, es la opción perfecta para un look relajado de fin de semana."
+  },
+  { 
+    "id": "31", 
+    "thumb_src": "/assets/ropa/camisa-mangalarga.jpg", 
+    "thumb_alt": "Camisa Mangalarga", 
+    "title": "Chaqueta deportiva Adidas", 
+    "price": 1800.00, 
+    "category": "Deporte", 
+    "description": "Estilo icónico para la pista o las calles. Esta chaqueta blanca de cierre completo está confeccionada en un tejido interlock suave y de caída impecable. Destaca por las clásicas tres franjas negras corriendo a lo largo de las mangas y el logotipo sutil en el pecho, ofreciendo un ajuste cómodo gracias a su cuello alto y puños acanalados."
+  },
+  { 
+    "id": "32", 
+    "thumb_src": "/assets/ropa/chumpa-cielo.jpg", 
+    "thumb_alt": "Chumpa Cielo", 
+    "title": "Chumpa rompevientos Adidas", 
+    "price": 1750.00, 
+    "category": "Deporte", 
+    "description": "Protección ultraligera contra los elementos. Este rompevientos en un fresco tono azul cielo cuenta con capucha ajustable, un práctico bolsillo con cremallera en el pecho y puños elásticos negros a contraste para mayor sujeción. Las bandas reflectantes en las mangas añaden visibilidad y seguridad durante tus entrenamientos nocturnos o matutinos."
+  },
+  { 
+    "id": "33", 
+    "thumb_src": "/assets/ropa/camisa-verde.jpg", 
+    "thumb_alt": "Camisa Verde", 
+    "title": "Camiseta técnica Adidas neón", 
+    "price": 850.00, 
+    "category": "Deporte", 
+    "description": "Máxima frescura y rendimiento para tus sesiones más intensas. Diseñada en un vibrante color verde neón, esta camiseta incorpora paneles de malla transpirable en los hombros y la espalda para optimizar el flujo de aire. Su tejido de secado rápido aleja el sudor de forma eficiente, mientras que el sutil logo reflectante añade un acabado premium."
+  },
+  { 
+    "id": "34", 
+    "thumb_src": "/assets/ropa/camisa-morada.jpg", 
+    "thumb_alt": "Camisa Morada", 
+    "title": "Camiseta deportiva morada", 
+    "price": 750.00, 
+    "category": "Mujer", 
+    "description": "Energía y dinamismo para tus entrenamientos. Esta camiseta presenta un tono morado vibrante con un sutil patrón de líneas horizontales texturizadas que mejoran el diseño. Su tejido ligero y altamente transpirable está pensado para mantener la frescura durante actividades físicas de media y alta intensidad."
+  },
+  { 
+    "id": "35", 
+    "thumb_src": "/assets/ropa/camisa-olivo.jpg", 
+    "thumb_alt": "Camisa Olivo", 
+    "title": "Camiseta básica verde olivo", 
+    "price": 600.00, 
+    "category": "Hombre", 
+    "description": "Un básico infaltable con un toque de color terroso y natural. Confeccionada en algodón suave de corte regular, esta camiseta en color verde olivo ofrece un ajuste cómodo e ideal para el día a día. Perfecta para combinar con jeans o bermudas en un look relajado de fin de semana."
+  },
+  { 
+    "id": "36", 
+    "thumb_src": "/assets/ropa/camisa-cafe.jpg", 
+    "thumb_alt": "Camisa Cafe", 
+    "title": "Camiseta clásica café bronce", 
+    "price": 600.00, 
+    "category": "Hombre", 
+    "description": "Estilo minimalista en un tono cálido y sobrio. Esta camiseta de cuello redondo está elaborada en un tejido de punto liso premium que destaca por su suavidad al tacto y retención del color. Su diseño limpio la convierte en una excelente prenda de capas bajo chaquetas o camisas abiertas."
+  },
+  { 
+    "id": "37", 
+    "thumb_src": "/assets/ropa/camisa-sinmangas.jpg", 
+    "thumb_alt": "Camisa Sinmangas", 
+    "title": "Camiseta deportiva gris", 
+    "price": 650.00, 
+    "category": "Deporte", 
+    "description": "Libertad total de movimiento para tus rutinas de fuerza o cardio. Diseñada con un corte atlético de sisas amplias y cuello redondo, esta camiseta sin mangas en color gris jaspeado evacua el sudor eficientemente, manteniéndote enfocado en romper tus marcas personales."
+  },
+  { 
+    "id": "38", 
+    "thumb_src": "/assets/ropa/formal-morada.jpg", 
+    "thumb_alt": "Formal Morada", 
+    "title": "Camisa formal morada clásica", 
+    "price": 1100.00, 
+    "category": "Hombre", 
+    "description": "Distinción y elegancia para eventos formales o de negocios. Esta camisa de botones presenta un tono morado profundo texturizado de caída impecable y estructura firme en el cuello. Su silueta sutilmente entallada proyecta una imagen profesional, pulcra y sofisticada."
+  },
+  { 
+    "id": "39", 
+    "thumb_src": "/assets/ropa/camisa-rosa.jpg", 
+    "thumb_alt": "Camisa Rosa", 
+    "title": "Camiseta clásica rosa pastel", 
+    "price": 600.00, 
+    "category": "Mujer", 
+    "description": "Aporta una nota fresca y suave a tu armario casual. Confeccionada en algodón transpirable de alta calidad, esta camiseta rosa pastel combina comodidad y versatilidad a la perfección. Una opción ligera e ideal para días soleados o estilos veraniegos relajados."
+  },
+  { 
+    "id": "40", 
+    "thumb_src": "/assets/ropa/camisa-huevo.jpg", 
+    "thumb_alt": "Camisa Huevo", 
+    "title": "Camiseta básica amarillo pastel", 
+    "price": 600.00, 
+    "category": "Mujer", 
+    "description": "Calidez sutil y confort en una sola prenda. Esta camiseta en un suave tono amarillo pastel o crema está diseñada en un corte clásico que se adapta cómodamente al cuerpo. El tejido de alta densidad ofrece durabilidad lavado tras lavado sin perder su textura dócil."
+  },
+  { 
+    "id": "41", 
+    "thumb_src": "/assets/ropa/mochila-puma.jpg", 
+    "thumb_alt": "Mochila Puma", 
+    "title": "Mochila Puma urbana negra", 
+    "price": 1200.00, 
+    "category": "Accesorios", 
+    "description": "El complemento ideal para tu rutina diaria. Esta mochila cuenta con un compartimento principal amplio, un bolsillo frontal de rápido acceso con el icónico logo de Puma estampado y correas acolchadas ajustables que garantizan la máxima comodidad al cargar tus pertenencias esenciales."
+  },
+  { 
+    "id": "42", 
+    "thumb_src": "/assets/ropa/mochila-verde.jpg", 
+    "thumb_alt": "Mochila Verde", 
+    "title": "Mochila clásica verde pino", 
+    "price": 950.00, 
+    "category": "Accesorios", 
+    "description": "Diseño funcional y minimalista con un toque de color natural. Fabricada en lona de alta resistencia, esta mochila ofrece correas ergonómicas y un amplio bolsillo frontal con cierre oculto, ideal para proteger tus dispositivos, cuadernos o accesorios de uso diario con un estilo relajado."
+  },
+  { 
+    "id": "43", 
+    "thumb_src": "/assets/ropa/gorra-verde.jpg", 
+    "thumb_alt": "Gorra Verde", 
+    "title": "Gorra deportiva verde olivo", 
+    "price": 450.00, 
+    "category": "Accesorios", 
+    "description": "Protección solar con un perfil urbano impecable. Esta gorra de seis paneles cuenta con visera curva estructurada, ojales bordados que favorecen la ventilación y un cierre posterior ajustable que asegura un calce óptimo para cualquier actividad al aire libre."
+  },
+  { 
+    "id": "44", 
+    "thumb_src": "/assets/ropa/cartera-olivo.jpg", 
+    "thumb_alt": "Cartera Olivo", 
+    "title": "Bolso de mano casual verde olivo", 
+    "price": 1350.00, 
+    "category": "Accesorios", 
+    "description": "Elegancia sutil y versatilidad contemporánea. Este bolso texturizado en tono verde olivo cuenta con asas superiores reforzadas, detalles de herrajes dorados y un amplio espacio interior organizado, ideal para transicionar sin esfuerzo de tus compromisos de oficina a salidas casuales."
+  },
+  { 
+    "id": "45", 
+    "thumb_src": "/assets/ropa/cartera-azul.jpg", 
+    "thumb_alt": "Cartera Azul", 
+    "title": "Cartera de hombro azul marino", 
+    "price": 1400.00, 
+    "category": "Accesorios", 
+    "description": "Un accesorio atemporal de estructura sofisticada. Confeccionado con un acabado liso y un tono azul profundo, este bolso incluye un colgante decorativo a juego y una correa de hombro ajustable. Sus compartimentos internos con cremallera permiten mantener tus objetos valiosos siempre en orden."
+  },
+  { 
+    "id": "46", 
+    "thumb_src": "/assets/ropa/mochila-nike.jpg", 
+    "thumb_alt": "Mochila Nike", 
+    "title": "Mochila técnica Nike deportiva", 
+    "price": 1500.00, 
+    "category": "Accesorios", 
+    "description": "Diseñada para deportistas exigentes y un estilo de vida activo. Esta mochila cuenta con múltiples bolsillos organizadores de malla, un compartimento especial acolchado y el legendario logotipo de la marca estampado al frente. Su respaldo acolchado ofrece transpirabilidad en los días más intensos."
+  },
+  { 
+    "id": "47", 
+    "thumb_src": "/assets/ropa/bolso-adidas.jpg", 
+    "thumb_alt": "Bolso Adidas", 
+    "title": "Bolso deportivo Adidas clásico", 
+    "price": 1100.00, 
+    "category": "Accesorios", 
+    "description": "Estilo retro e identidad urbana. Este bolso cruzado resalta por las icónicas tres franjas en contraste blanco sobre un fondo negro texturizado. Perfecto para llevar lo indispensable al gimnasio o recorrer la ciudad manteniendo tus manos libres con un look marcadamente deportivo."
+  },
+  { 
+    "id": "48", 
+    "thumb_src": "/assets/ropa/gorra-roja.jpg", 
+    "thumb_alt": "Gorra Roja", 
+    "title": "Gorra urbana roja vibrante", 
+    "price": 450.00, 
+    "category": "Accesorios", 
+    "description": "Una declaración audaz de color para tus atuendos casuales. Esta gorra presenta una visera curva clásica, paneles frontales reforzados que mantienen la forma y una banda interna que absorbe la humedad, ideal para brindar frescura y estilo durante todo el día."
+  },
+  { 
+    "id": "49", 
+    "thumb_src": "/assets/ropa/cartera-roja.jpg", 
+    "thumb_alt": "Cartera Roja", 
+    "title": "Bolso de mano sofisticado rojo", 
+    "price": 1450.00, 
+    "category": "Accesorios", 
+    "description": "El toque definitivo de distinción para tu silueta. Este elegante bolso en color rojo escarlata destaca por sus acabados limpios, costuras de alta precisión y un interior forrado de tacto suave. Sus asas rígidas permiten llevarlo con un porte formal y refinado."
+  },
+  { 
+    "id": "50", 
+    "thumb_src": "/assets/ropa/cartera-negra.jpg", 
+    "thumb_alt": "Cartera Negra", 
+    "title": "Cartera sastre clásica negra", 
+    "price": 1300.00, 
+    "category": "Accesorios", 
+    "description": "El básico definitivo que combina con absolutamente todo. Este bolso negro de diseño estructurado ofrece una silueta pulcra, cierre superior de cremallera segura y bolsillos internos de fácil acceso. Una inversión atemporal indispensable para cualquier guardarropa moderno."
+  },
+  { 
+    "id": "51", 
+    "thumb_src": "/assets/ropa/bolso-cafe.jpg", 
+    "thumb_alt": "Bolso Cafe", 
+    "title": "Bolso de mano casual café terra", 
+    "price": 1250.00, 
+    "category": "Accesorios", 
+    "description": "Estilo orgánico y funcionalidad para tu día a día. Este bolso en un cálido tono café cuenta con un sutil patrón de líneas verticales que estilizan su diseño. Equipado con asas rígidas muy cómodas y un compartimento principal seguro, es el complemento perfecto para añadir un toque rústico y elegante a tus atuendos."
+  },
+  { 
+    "id": "52", 
+    "thumb_src": "/assets/ropa/bolso blanco.jpg", 
+    "thumb_alt": "Bolso Blanco", 
+    "title": "Cartera de hombro blanco marfil", 
+    "price": 1350.00, 
+    "category": "Accesorios", 
+    "description": "Luminosidad y distinción minimalista. Esta cartera en tono blanco marfil destaca por su silueta limpia y estructurada, complementada con herrajes discretos y un colgante decorativo a juego. Su diseño sofisticado la convierte en la opción ideal para eventos semiformales o para resaltar tus looks casuales favoritos."
+  }
+
+  ],
+  "categories": [
+    {
+      "thumb_src": "/assets/ropa/categoria-mujer.jpg",
+      "title": "Mujer",
+      "collection": "Verano 2026"
+    },
+    {
+      "thumb_src": "/assets/ropa/categoria-hombre.jpg",
+      "title": "Hombre",
+      "collection": "Otoño 2026"
+    },
+    {
+      "thumb_src": "/assets/ropa/categoria-accesorios.jpg",
+      "title": "Accesorios",
+      "collection": "Primavera 2026"
+    }
+  ]
+}

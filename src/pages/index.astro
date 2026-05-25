@@ -1,0 +1,415 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../../assets/scss/astro-ecommerce.scss';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import PromoSectionLarge from '../components/promo/promoSectionLarge';
+import TestimonialsFade from '../components/promo/testimonialsFade';
+import IncentiveCols from '../components/incentives/incentiveCols';
+import IncentiveLarge from '../components/incentives/incentiveLarge';
+import data from '../data/data.json';
+import CardProduct from '../components/products/cardProduct';
+
+
+// Tomamos los primeros 3 productos para mostrarlos en el Inicio para efectos del ejemplo
+const featuredProducts = data.products.slice(0, 6);
+---
+
+<Layout title="Velora | Inicio">
+  <main style="background-color: #FEFAE0; color: #2C3E20; min-height: 100vh; display: flex; flex-direction: column;">
+    <Navbar />
+ 
+    {/* Hero Section - Velora */}
+    <div style="flex: 1 1 auto;">
+      <section class="hero-section mb-5 rounded-0">
+        <div class="hero-bg rounded-0"></div>
+        <div class="hero-mask rounded-0"></div>
+        <div class="container h-100">
+          <div class="hero-content d-flex flex-column justify-content-center align-items-center text-center h-100">
+            <h1 class="hero-title mb-3">VELORA</h1>
+            <p class="hero-subtitle mb-4">Viste tu esencia</p>
+            <div class="hero-buttons d-flex flex-column flex-sm-row gap-3 justify-content-center">
+              <a href="/catalogo?filtro=Mujer" class="hero-button">SHOP WOMENS</a>
+              <a href="/catalogo?filtro=Hombre" class="hero-button">SHOP MENS</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <h2 style="font-family: sans-serif; font-weight: 800; color: #1A1A1A; font-size: 4.5rem;">
+            The biggest labels
+          </h2>
+        </div>
+      </div>
+
+    </div>
+
+      {/* Tarjetas de Mujer y Hombre — Velora */}
+      <section class="category-section">
+        <div class="category-grid">
+
+          {/* ── MUJER ── */}
+          <a href="/catalogo?filtro=Mujer" class="cat-card cat-card--mujer">
+            <div class="cat-card__accent"></div>
+            <div class="cat-card__image">
+              <img
+                src="/Imagenes/Modelo-Mujer.png"
+                alt="Modelo colección Mujer Verano 2026"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-card__overlay"></div>
+            <span class="cat-card__tag">Verano 2026</span>
+            <div class="cat-card__content">
+              <p class="cat-card__season">COLECCIÓN</p>
+              <h2 class="cat-card__title">Mujer</h2>
+              <span class="cat-card__btn cat-card__btn--gold">
+                Explorar
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          {/* ── HOMBRE ── */}
+          <a href="/catalogo?filtro=Hombre" class="cat-card cat-card--hombre">
+            <div class="cat-card__accent cat-card__accent--taupe"></div>
+            <div class="cat-card__image">
+              <img
+                src="/Imagenes/Modelo-Hombre.png"
+                alt="Modelo colección Hombre Otoño 2026"
+                loading="lazy"
+              />
+            </div>
+            <div class="cat-card__overlay"></div>
+            <span class="cat-card__tag">Otoño 2026</span>
+            <div class="cat-card__content">
+              <p class="cat-card__season">COLECCIÓN</p>
+              <h2 class="cat-card__title">Hombre</h2>
+              <span class="cat-card__btn cat-card__btn--taupe">
+                Explorar
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <style>
+        .category-section {
+          padding: 3rem 1.5rem;
+          background: #FEFAE0;
+        }
+
+        .category-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.25rem;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+          .category-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        /* ── BASE CARD ── */
+        .cat-card {
+          position: relative;
+          border-radius: 12px;
+          overflow: hidden;
+          height: 420px;
+          display: block;
+          text-decoration: none;
+          cursor: pointer;
+          transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .cat-card:hover {
+          transform: scale(1.02);
+        }
+
+        /* image zoom on hover */
+        .cat-card:hover .cat-card__image img {
+          transform: scale(1.07);
+        }
+
+        /* overlay appears on hover */
+        .cat-card:hover .cat-card__overlay {
+          opacity: 1;
+        }
+
+        /* button slides up on hover */
+        .cat-card:hover .cat-card__btn {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        /* title letter-spacing expands on hover */
+        .cat-card:hover .cat-card__title {
+          letter-spacing: 0.22em;
+        }
+
+        /* ── ACCENT BAR (top) ── */
+        .cat-card__accent {
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 4px;
+          background: #606C38;
+          z-index: 3;
+        }
+
+        .cat-card__accent--taupe {
+          background: #606C38;
+        }
+
+        /* ── IMAGE ── */
+        .cat-card__image {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+        }
+
+        .cat-card__image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* fallback bg when no image loaded */
+        .cat-card--mujer .cat-card__image {
+          background: #1A1A1A;
+        }
+
+        .cat-card--hombre .cat-card__image {
+          background: #2C2825;
+        }
+
+        /* ── DARK OVERLAY ── */
+        .cat-card__overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.18) 55%,
+            transparent 100%
+          );
+          opacity: 0.65;
+          transition: opacity 0.35s ease;
+          z-index: 1;
+        }
+
+        /* ── SEASON TAG ── */
+        .cat-card__tag {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          z-index: 2;
+          font-family: sans-serif;
+          font-size: 13px;
+          letter-spacing: 0.12em;
+          font-weight: 500;
+          background: rgba(201, 169, 110, 0.15);
+          color: #606C38;
+          border: 0.5px solid rgba(201, 169, 110, 0.45);
+          padding: 4px 12px;
+          border-radius: 20px;
+        }
+
+        /* ── BOTTOM CONTENT ── */
+        .cat-card__content {
+          position: absolute;
+          bottom: 0; left: 0; right: 0;
+          padding: 24px 28px;
+          z-index: 2;
+        }
+
+        .cat-card__season {
+          font-family: sans-serif;
+          font-size: 15px;
+          letter-spacing: 0.18em;
+          color: #d1dbaf;
+          margin-bottom: 6px;
+          font-weight: 500;
+        }
+
+        .cat-card__title {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-size: 42px;
+          color: #FAFAF8;
+          font-weight: 400;
+          letter-spacing: 0.14em;
+          margin: 0 0 18px 0;
+          transition: letter-spacing 0.35s ease;
+          line-height: 1;
+        }
+
+        /* ── BUTTON ── */
+        .cat-card__btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-family: sans-serif;
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          padding: 10px 22px;
+          border-radius: 4px;
+          transform: translateY(12px);
+          opacity: 0;
+          transition:
+            transform 0.3s ease 0.05s,
+            opacity 0.3s ease 0.05s;
+        }
+
+        .cat-card__btn--gold {
+          background: #606C38;
+          color: #e1d9d9;
+        }
+
+        .cat-card__btn--taupe {
+          background: #606c38;
+          color: #FAFAF8;
+        }
+      </style>
+
+    <style>
+      .hero-section {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        border-radius: 24px;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('/Imagenes/Banner%20Hero.png');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.7);
+      }
+      .hero-mask {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        min-height: 520px;
+      }
+      .hero-title {
+        font-size: clamp(3rem, 7vw, 6.5rem);
+        line-height: 0.9;
+        font-weight: 900;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #FEFAE0;
+        margin-bottom: 0.75rem;
+      }
+      .hero-subtitle {
+        font-size: 1.4rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.9);
+        margin-bottom: 1.5rem;
+      }
+      .hero-buttons {
+        gap: 1rem;
+      }
+      .hero-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 220px;
+        padding: 1rem 2rem;
+        border: 2px solid #FEFAE0;
+        background: transparent;
+        color: #FEFAE0;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+      }
+      .hero-button:hover {
+        background: #000000;
+        color: #FEFAE0;
+        border-color: #000000;
+        text-decoration: none;
+      }
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        cursor: pointer;
+      }
+    </style>
+
+
+    {/* SECCIÓN - NUEVA PROMOCIÓN DE VERANO */}
+    <div class="container mb-5 mt-5">
+      <PromoSectionLarge 
+        title="Nueva Colección Verano 2026"
+        full_description="Descubre nuestros diseños más exclusivos para esta temporada. Prendas de calidad premium con estilos minimalistas y elegantes."
+        pageHeaderBgImg= "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1500&q=80"
+        pageHeaderMinVh="400px"
+        pageHeaderRadius="12px"
+      />
+    </div>
+
+    <div class="container mb-3 pb-5">
+    <h2 
+      class="text-center mb-2" 
+      style="color: #2C3E20; font-family: sans-serif; font-weight: 900; font-size: 3.5rem; letter-spacing: -1.5px; line-height: 1.1;"
+    >
+      Destacados de la Semana
+    </h2>
+
+    <div class="row mt-4">
+      {featuredProducts.map((product) => (
+        <div class="col-10 col-md-4 mb-5">
+          <CardProduct 
+            id={product.id}
+            thumb_src={product.thumb_src}
+            thumb_alt={product.thumb_alt}
+            title={product.title}
+            price={`L. ${product.price.toFixed(2)}`}
+            raw_price={product.price} 
+          />
+        </div>
+      ))}        
+    </div>
+  </div>
+
+      {/* SECCIÓN - INcentivos*/}
+      <div class="container">
+      <IncentiveLarge />
+    </div>
+
+        {/* SECCIÓN - Preguntas Frecuentes */}
+    <div class="container">
+      <IncentiveCols />
+    </div>
+
+    <Footer />
+  </main>
+</Layout>

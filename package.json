@@ -1,0 +1,30 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "aos": "^2.3.4",
+    "astro": "^6.3.7",
+    "astro-icon": "^1.1.5",
+    "forward-ref": "^1.0.0",
+    "json-server": "^0.17.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^18.2.0",
+    "swiper": "^12.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

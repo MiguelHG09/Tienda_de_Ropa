@@ -1,0 +1,137 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import data from '../../data/data.json'; 
+import '../../../assets/scss/astro-ecommerce.scss';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import CardProduct from '../../components/products/cardProduct';
+---
+
+<Layout title="Velora | Catálogo">
+  <main style="background-color: #E8E4D9; color: #2C3E20; min-height: 100vh;">
+    <Navbar client:load />
+    
+    <div class="container mt-5 mb-10">
+      <div class="d-block text-center mb-4 mt-5">
+        <h1 class="display-4 font-weight-bold tracking-tight" style="color: #2C3E20;">CATÁLOGO</h1>
+      </div>
+
+
+      <div class="row mt-4">
+        {data.products.map((product) => (
+          <div class="col-12 col-md-6 col-lg-4 mb-5 product-card" data-category={product.category}>
+            <CardProduct 
+              id={product.id}
+              thumb_src={product.thumb_src}
+              thumb_alt={product.thumb_alt}
+              title={product.title}
+              price={`L. ${product.price.toFixed(2)}`}
+              raw_price={product.price} 
+            />
+          </div>
+        ))}        
+      </div>
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .btn-velora-active {
+    background-color: #4A5D23 !important;
+    color: #E8E4D9 !important;
+    border: 1px solid #4A5D23 !important;
+  }
+  .btn-velora-outline {
+    background-color: #ffffff !important;
+    color: #4A5D23 !important;
+    border: 1px solid #4A5D23 !important;
+  }
+  .btn-velora-outline:hover {
+    background-color: #D2691E !important;
+    color: #ffffff !important;
+    border-color: #D2691E !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.product-card');
+
+    // Función que hace todo el trabajo de filtrar
+    const aplicarFiltro = (filtro: string) => {
+      cards.forEach(card => {
+        const productCategory = card.getAttribute('data-category');
+        if (filtro === 'all' || filtro === productCategory) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+      
+      //  estilo de botones
+      buttons.forEach(btn => { 
+        if (btn.getAttribute('data-filter') === filtro) {
+            btn.classList.add('btn-velora-active');
+            btn.classList.remove('btn-velora-outline');
+        } else {
+            btn.classList.remove('btn-velora-active');
+            btn.classList.add('btn-velora-outline');
+        }
+      });
+    };
+
+    // Leer filtros al cargar
+    const urlParams = new URLSearchParams(window.location.search);
+    const filtroParam = urlParams.get('filtro');
+
+    if (filtroParam) {
+      aplicarFiltro(filtroParam);
+    }
+
+    // clic en botones
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter') || 'all';
+        aplicarFiltro(filterValue);
+      });
+    });
+
+    // Logica para agregar al carrito
+    const addButtons = document.querySelectorAll('.add-to-cart-btn');
+    addButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const button = e.currentTarget as HTMLButtonElement;
+        const product = {
+          id: button.getAttribute('data-id'),
+          title: button.getAttribute('data-title'),
+          price: parseFloat(button.getAttribute('data-price') || "0"),
+          img: button.getAttribute('data-img'),
+          quantity: 1
+        };
+
+        let cart = JSON.parse(localStorage.getItem('velora_cart') || '[]');
+        const existingProduct = cart.find((item: any) => item.id === product.id);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push(product);
+        }
+
+        localStorage.setItem('velora_cart', JSON.stringify(cart));
+        window.dispatchEvent(new CustomEvent('cart-updated'));
+        
+        const originalText = button.innerHTML;
+        button.innerHTML = "¡Agregado! ✔";
+        button.style.backgroundColor = "#4A5D23";
+        button.style.borderColor = "#4A5D23";
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.style.backgroundColor = "#D2691E";
+          button.style.borderColor = "#D2691E";
+        }, 1500);
+      });
+    });
+  });
+</script>

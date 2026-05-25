@@ -1,0 +1,399 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import data from '../../data/data.json';
+import '../../../assets/scss/astro-ecommerce.scss';
+
+export async function getStaticPaths() {
+  return data.products.map((product) => ({
+    params: { id: String(product.id) },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<Layout title={`${product.title} | Velora`}>
+  <main style="background-color: #F5F1E8; color: #2C3E20; min-height: 100vh;">
+    <Navbar client:load />
+
+    <div class="container mt-5 mb-10 pt-4" style="max-width: 1100px;">
+      <div class="pd-wrap">
+
+        <!-- Columna imagen -->
+        <div class="pd-img-col">
+          <span class="pd-badge">Nuevo</span>
+          <img
+            src={product.thumb_src}
+            alt={product.thumb_alt}
+            class="pd-img"
+          />
+        </div>
+
+        <!-- Columna info -->
+        <div class="pd-info">
+          <p class="pd-brand">Velora · Colección Otoño</p>
+          <h1 class="pd-title">{product.title}</h1>
+
+          <div class="pd-price-row">
+            <span class="pd-price">L. {product.price.toFixed(2)}</span>
+            <span class="pd-price-sub">IVA incluido</span>
+          </div>
+
+          <div class="pd-stars">
+            <span class="pd-star">★</span>
+            <span class="pd-star">★</span>
+            <span class="pd-star">★</span>
+            <span class="pd-star">★</span>
+            <span class="pd-star off">★</span>
+            <span class="pd-reviews">4.0 · 38 reseñas</span>
+          </div>
+
+          <p class="pd-desc">{product.description}</p>
+
+          <div class="pd-divider"></div>
+
+          <!-- Material -->
+          <div class="pd-material-row">
+            <i class="ti ti-shirt" aria-hidden="true"></i>
+            <span>100% Algodón de alta calidad · Lavar en frío</span>
+          </div>
+
+          <div class="pd-divider"></div>
+
+          <!-- Tallas -->
+          <p class="pd-label">Talla</p>
+          <div class="pd-sizes" id="sizes">
+            <div class="pd-size out" title="Agotado">XS</div>
+            <div class="pd-size" data-size="S">S</div>
+            <div class="pd-size active" data-size="M">M</div>
+            <div class="pd-size" data-size="L">L</div>
+            <div class="pd-size" data-size="XL">XL</div>
+          </div>
+
+          <!-- Cantidad -->
+          <p class="pd-label" style="margin-top:1rem;">Cantidad</p>
+          <div class="pd-qty-row">
+            <button class="pd-qty-btn" id="qtyDown" aria-label="Reducir">
+              <i class="ti ti-minus"></i>
+            </button>
+            <span class="pd-qty-val" id="qty">1</span>
+            <button class="pd-qty-btn" id="qtyUp" aria-label="Aumentar">
+              <i class="ti ti-plus"></i>
+            </button>
+          </div>
+
+          <div class="pd-divider"></div>
+
+          <!-- Acciones -->
+          <div class="pd-actions">
+            <button
+              class="pd-btn-cart add-to-cart-btn"
+              id="cartBtn"
+              data-id={product.id}
+              data-title={product.title}
+              data-price={product.price}
+              data-img={product.thumb_src}
+            >
+              <i class="ti ti-shopping-cart"></i>
+              <span id="cartTxt">Agregar al carrito</span>
+            </button>
+            <button class="pd-btn-wish" id="wishBtn" aria-label="Guardar en favoritos">
+              <i class="ti ti-heart"></i>
+            </button>
+          </div>
+
+          <!-- Chips de confianza -->
+          <div class="pd-chips">
+            <span class="pd-chip"><i class="ti ti-truck" aria-hidden="true"></i> Envío gratis +L.500</span>
+            <span class="pd-chip"><i class="ti ti-refresh" aria-hidden="true"></i> Cambios en 30 días</span>
+            <span class="pd-chip"><i class="ti ti-shield-check" aria-hidden="true"></i> Pago seguro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  @import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+  .pd-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(74,93,35,0.15);
+    box-shadow: 0 8px 40px rgba(44,62,32,0.08);
+  }
+  .pd-img-col {
+    background: #F0EDE4;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    min-height: 480px;
+  }
+  .pd-badge {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    background: #4A5D23;
+    color: #EAF3DE;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+  .pd-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform .4s ease;
+  }
+  .pd-img:hover { transform: scale(1.04); }
+
+  .pd-info {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(74,93,35,0.12);
+  }
+  .pd-brand {
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: #6B7E3A;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .35rem;
+  }
+  .pd-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2C3E20;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+  }
+  .pd-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+  .pd-price { font-size: 28px; font-weight: 700; color: #4A5D23; }
+  .pd-price-sub { font-size: 13px; color: #888; }
+
+  .pd-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 1rem;
+  }
+  .pd-star { color: #D2691E; font-size: 16px; }
+  .pd-star.off { color: #ddd; }
+  .pd-reviews { font-size: 12px; color: #888; margin-left: 4px; }
+
+  .pd-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    border-left: 3px solid #D2691E;
+    padding-left: .75rem;
+    margin-bottom: 1rem;
+  }
+  .pd-divider { height: 1px; background: rgba(74,93,35,0.1); margin: .75rem 0; }
+
+  .pd-material-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: .25rem;
+  }
+  .pd-material-row i { font-size: 16px; color: #4A5D23; }
+
+  .pd-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: .5rem;
+  }
+  .pd-sizes { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .pd-size {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(74,93,35,0.25);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #2C3E20;
+    background: #fff;
+    transition: all .18s;
+    user-select: none;
+  }
+  .pd-size:hover { border-color: #4A5D23; color: #4A5D23; }
+  .pd-size.active { background: #4A5D23; color: #EAF3DE; border-color: #4A5D23; }
+  .pd-size.out { opacity: .35; cursor: not-allowed; text-decoration: line-through; }
+
+  .pd-qty-row { display: flex; align-items: center; gap: .75rem; }
+  .pd-qty-btn {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(74,93,35,0.25);
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #2C3E20;
+    transition: background .15s;
+  }
+  .pd-qty-btn:hover { background: #F0EDE4; }
+  .pd-qty-val { font-size: 16px; font-weight: 600; min-width: 24px; text-align: center; color: #2C3E20; }
+
+  .pd-actions { display: flex; gap: .6rem; margin: 1rem 0 .75rem; }
+  .pd-btn-cart {
+    flex: 1;
+    padding: .85rem 1rem;
+    background: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    transition: all .2s;
+    letter-spacing: .02em;
+  }
+  .pd-btn-cart:hover { background: #B85A18; transform: translateY(-1px); }
+  .pd-btn-cart.added { background: #4A5D23; }
+
+  .pd-btn-wish {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(74,93,35,0.25);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #aaa;
+    transition: all .2s;
+  }
+  .pd-btn-wish:hover, .pd-btn-wish.active {
+    border-color: #D2691E;
+    color: #D2691E;
+    background: #FFF5F0;
+  }
+
+  .pd-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .pd-chip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #666;
+    background: #F5F1E8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(74,93,35,0.12);
+  }
+  .pd-chip i { font-size: 13px; color: #4A5D23; }
+
+  @media (max-width: 768px) {
+    .pd-wrap { grid-template-columns: 1fr; }
+    .pd-img-col { min-height: 300px; }
+    .pd-info { border-left: none; border-top: 1px solid rgba(74,93,35,0.12); padding: 1.5rem; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let qty = 1;
+
+    // --- Tallas ---
+    document.querySelectorAll('.pd-size:not(.out)').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.pd-size').forEach(s => s.classList.remove('active'));
+        el.classList.add('active');
+      });
+    });
+
+    // --- Cantidad ---
+    document.getElementById('qtyDown')?.addEventListener('click', () => {
+      qty = Math.max(1, qty - 1);
+      document.getElementById('qty')!.textContent = String(qty);
+    });
+    document.getElementById('qtyUp')?.addEventListener('click', () => {
+      qty = Math.min(10, qty + 1);
+      document.getElementById('qty')!.textContent = String(qty);
+    });
+
+    // --- Favorito ---
+    let wished = false;
+    const wishBtn = document.getElementById('wishBtn');
+    wishBtn?.addEventListener('click', () => {
+      wished = !wished;
+      wishBtn.classList.toggle('active', wished);
+      wishBtn.querySelector('i')!.className = wished ? 'ti ti-heart-filled' : 'ti ti-heart';
+    });
+
+    // --- Agregar al carrito ---
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const button = e.currentTarget as HTMLButtonElement;
+        const cartTxt = document.getElementById('cartTxt');
+
+        const product = {
+          id:       button.getAttribute('data-id'),
+          title:    button.getAttribute('data-title'),
+          price:    parseFloat(button.getAttribute('data-price') || '0'),
+          img:      button.getAttribute('data-img'),
+          quantity: qty,
+        };
+
+        let cart = JSON.parse(localStorage.getItem('velora_cart') || '[]');
+        const existing = cart.find((item: any) => item.id === product.id);
+        if (existing) {
+          existing.quantity += qty;
+        } else {
+          cart.push(product);
+        }
+        localStorage.setItem('velora_cart', JSON.stringify(cart));
+        window.dispatchEvent(new CustomEvent('cart-updated'));
+
+        button.classList.add('added');
+        if (cartTxt) cartTxt.textContent = '¡Agregado! ✓';
+        setTimeout(() => {
+          button.classList.remove('added');
+          if (cartTxt) cartTxt.textContent = 'Agregar al carrito';
+        }, 2000);
+      });
+    });
+  });
+</script>
